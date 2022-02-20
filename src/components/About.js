@@ -8,21 +8,42 @@ export default function About() {
     backgroundColor:"white"
   })
 
+  const [buttonText, setButtonText] = useState("Enable Dark Mode")
+
+let darkMode = ()=> {
+
+  if (style1.color == "white"){
+    setStyle1({
+      color:"black",
+      backgroundColor:"white"
+    })
+    setButtonText("Enable Dark Mode")
+  }
+  else{
+    setStyle1({
+      color:"white",
+      backgroundColor:"black"
+    })
+    setButtonText("Enable Light Mode")
+
+  }
+
   
+}
 
   return (
     <>
     <div className="container my-3" style={style1}>
       
     <div className="container" className="accordion" id="accordionExample">
-  <div className="accordion-item" style={style1}>
+  <div className="accordion-item">
     <h2 className="accordion-header" id="headingOne">
       <button className="accordion-button " style={style1} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
         Accordion Item #1
       </button>
     </h2>
     <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample"  style={style1}>
-      <div className="accordion-body">
+      <div className="accordion-body" style={style1}>
         <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
       </div>
     </div>
@@ -51,7 +72,7 @@ export default function About() {
       </div>
     </div>
   </div>
-<button className="btn btn-primary my-2">Enable Dark Mode</button>
+<button className="btn btn-primary my-2" onClick={darkMode}>{buttonText}</button>
 </div>
 
 </div>
