@@ -27,7 +27,7 @@ export default function TextForm(props) {
     <>
       <div className="mb-3">
         <label htmlFor="myBox" className="form-label"><h4>{props.heading}</h4></label>
-        <textarea className="form-control" placeholder='Enter your text' id="myBox" value={text} onChange={handelOnChange} rows="8"></textarea>
+        <textarea className="form-control" placeholder='Enter your text' id="myBox" value={text} style={{backgroundColor: props.mode=== "light"?"white":"gray", color:props.mode=== "light"?"black":"white"}} onChange={handelOnChange} rows="8"></textarea>
         <button className="btn btn-primary my-3" onClick={handelUpClick}>Convert to Uppercase</button>
         <button className="btn btn-primary my-3 mx-4" onClick={handelLoClick}>Convert to LowerCase</button>
         <button className="btn btn-primary my-3 mx-0" onClick={handelCpClick}>Copy Text</button>

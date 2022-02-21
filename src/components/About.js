@@ -12,7 +12,7 @@ export default function About() {
 
 let darkMode = ()=> {
 
-  if (style1.color == "white"){
+  if (style1.color === "white"){
     setStyle1({
       color:"black",
       backgroundColor:"white"
@@ -35,7 +35,7 @@ let darkMode = ()=> {
     <>
     <div className="container my-3" style={style1}>
       
-    <div className="container" className="accordion" id="accordionExample">
+    <div className="container accordion" id="accordionExample">
   <div className="accordion-item">
     <h2 className="accordion-header" id="headingOne">
       <button className="accordion-button " style={style1} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -50,7 +50,7 @@ let darkMode = ()=> {
   </div>
   <div className="accordion-item">
     <h2 className="accordion-header" id="headingTwo">
-      <button style={style1} className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style={style1}>
+      <button style={style1} className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
         Accordion Item #2
       </button>
     </h2>

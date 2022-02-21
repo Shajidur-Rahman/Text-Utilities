@@ -5,22 +5,22 @@ import PropTypes from 'prop-types'
 export default function Navbar(props) {
 
 
-   function textMode(){
+  function textMode() {
     let textmode = "dark"
-    
-    
-    if (props.mode === "dark"){
+
+
+    if (props.mode === "dark") {
       textmode = "light"
       return textmode;
-  } 
-  
-  
-  else{
-    return textmode;
+    }
+
+
+    else {
+      return textmode;
+    }
+
   }
 
-   }
-  
 
   return (
     <>
@@ -39,13 +39,19 @@ export default function Navbar(props) {
                 <a className="nav-link" href="/">{props.aboutText}</a>
               </li>
             </ul>
+            <div className='mx-4'>
+              <input type="color" id="head" name="head"
+                value="#e66465" />
+              <label for="head">Color</label>
+            </div>
+
             {/* <form className="d-flex">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button className="btn btn-outline-primary" type="submit">Search</button>
       </form> */}
-            <div class={`form-check form-switch text-${textMode()}`}>
-              <input class="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-              <label class="form-check-label" for="flexSwitchCheckDefault">Enable Dark Mode</label>
+            <div className={`form-check form-switch text-${textMode()}`}>
+              <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+              <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable Dark Mode</label>
             </div>
           </div>
         </div>
